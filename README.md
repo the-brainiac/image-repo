@@ -37,7 +37,11 @@ https://github.com/the-brainiac/image-repo
 ### Step - 1
 Install latest version of python from https://www.python.org/downloads/
 ### Step - 2
-Open your terminal (or powershell if you are using windows operating system.)
+Open your terminal (or powershell if you are using windows operating system.) then to clone this repo use this command -
+```
+git clone https://github.com/the-brainiac/image-repo.git
+```
+or download as zip file then extract it.
 ### Step - 3 (Optional)
 install virtual enviornment 
 ```
