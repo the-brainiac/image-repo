@@ -1,0 +1,198 @@
+:root {
+    --background: #f0f2f5;
+    --grey_text: #959ba8;
+    --focus_color: #1298f6;
+    --hover_grey: #e4e6eb;
+}
+
+li,
+span,
+label,
+input,
+textarea {
+    font-family: 'Roboto Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.roboto {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.center {
+    justify-content: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.block {
+    display: block;
+}
+
+body {
+    background-color: var(--background);
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.opacity {
+    opacity: 0.3;
+}
+
+
+/* nav */
+
+nav {
+    background: #383232 url(../images/background.jpg);
+    color: white;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav>a {
+    color: white;
+}
+
+nav>a:hover {
+    color: #9099af;
+}
+
+.left__menu {
+    margin-top: 10px;
+    width: 20%;
+    min-width: 300px;
+}
+
+.right__menu {
+    margin-top: 10px;
+    min-width: 400px;
+    width: 77%;
+}
+
+.btn-1 {
+    width: 30px;
+}
+
+.image__container {
+    background-color: white;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+
+.created {
+    font-size: 11px;
+    color: #65676b;
+}
+
+.buy {
+    background-color: #fb641b;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    width: 150px;
+    text-align: center;
+}
+
+.buy:hover {
+    color: white;
+}
+
+.image__icon {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    margin: 5px 10px;
+}
+
+.click__option {
+    border-radius: 8px;
+    padding-right: 5px;
+}
+
+.click__option:hover {
+    background-color: var(--hover_grey);
+}
+
+.circled__svg {
+    text-align: center;
+    font-size: 16px;
+    background-color: var(--hover_grey);
+}
+
+.circled__svg:hover {
+    background-color: #dceeff;
+    color: var(--focus_color);
+}
+
+.hint__element:hover,
+.hint__element:focus {
+    position: relative;
+}
+
+.hint__element:hover .hint,
+.hint__element:focus .hint {
+    display: block;
+    position: absolute;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    min-width: fit-content;
+    text-align: center;
+    border-radius: 5px;
+    opacity: 0.8;
+    padding: 5px;
+    z-index: 100;
+    top: 50px;
+}

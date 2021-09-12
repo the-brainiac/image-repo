@@ -1,0 +1,9 @@
+{% extends "image_gallery/base.html" %} {% load static %} {% block content %} {% load crispy_forms_tags %}
+<div class="container">
+    <form method="post">
+        {% csrf_token %} {{form|crispy}}
+        <button style="margin: 10px 0;" type="submit" class="btn btn-primary">Login</button>
+        <a style="margin: 10px 0;" class="btn btn-primary" href="{% url 'image_gallery:user_create' %}">Create Account</a>
+    </form>
+</div>
+{% endblock %}

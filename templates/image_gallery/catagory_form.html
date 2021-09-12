@@ -1,0 +1,9 @@
+{% extends "image_gallery/base.html" %} {% load static %} {% block content %} {% load crispy_forms_tags %}
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %} {{form|crispy}}
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+    <a href="{% url 'image_gallery:home' %}">Back?</a>
+</div>
+{% endblock %}

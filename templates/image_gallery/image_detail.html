@@ -1,0 +1,29 @@
+{% extends 'image_gallery/base.html' %} {% load static %} {% block content %}
+
+<div class="image__container" style="width: 90%; margin: auto;">
+    <div class="flex space-between align-center">
+        <h4 style="margin: 0; text-transform: capitalize;">{{object.owner.username}}</h4>
+        {% if request.user == object.owner %}
+        <div class="flex center">
+            <a href="{% url 'image_gallery:image_update' object.id %}" class="pointer image__icon circled__svg flex align-center hint__element center">
+                <i class="fas fa-pencil-alt"></i>
+                <span class="hint hide">Edit</span>
+            </a>
+            <div class="pointer image__icon circled__svg flex align-center hint__element center" onclick="delete_image('{% url 'image_gallery:image_delete' object.id %}', '{{csrf_token}}')">
+                <i class="fal fa-trash-alt"></i>
+                <span class="hint hide">Delete</span>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    <p class="created">{{object.created_at}}</p>
+    <img style="max-width: 95%;" src="{{object.photo.url}}" alt="">
+    <h5>Catagory: {{object.catagory}}</h5>
+    <div style="max-width: 95%; text-align: justify;" class="description">{{object.description}}</div>
+    <hr>
+    <div class="flex space-between align-center">
+        <h4>{{object.price}} &#8377;</h4>
+        <a href="{% url 'image_gallery:payment' %}" class="buy">Buy Now</a>
+    </div>
+</div>
+{% endblock %}
